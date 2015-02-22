@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Crear una cuenta nueva</title>
+<style type="text/css">
+.input_transp {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	color: #000;
+	border: 1px solid #CCC;
+}
+.input_fecha {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	color: #000;
+	border: 1px solid #CCC;
+}
+.text_name {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	color: #000;
+	font-weight: bold;
+}
+.boton_crear {
+	width: 330px;
+	height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+}
+.Titulo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #369;
+	text-align: left;
+}
+.DivError {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+	text-align: left;
+	background-color: #FF9;
+	height: 100%;
+	width: 100%;
+}
+.tabla {
+	border: 2px solid #CCC;
+}
+.descripcion {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+.separador_fecha {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #000;
+}
+</style>
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+<form action="register.php" method="POST"><table width="294" border="0" cellspacing="0">
+  <table width="800" border="0" align="center" cellspacing="0" class="tabla">
+  <tr>
+
+    <td height="43" align="center" class="Titulo">&nbsp;</td>
+    <td height="43" colspan="3" align="center" class="Titulo">Crear una cuenta nueva.</td>
+    </tr>
+  <tr>
+    <td height="42" bgcolor="#FFFF99" class="text_name">&nbsp;</td>
+    <td height="42" colspan="3" bgcolor="#FFFF99" class="text_name">Es imprescindible que dispongas una cuenta en Google Calendar antes de continuar. Haz clic <a href="https://www.google.com/accounts/NewAccount?service=cl" target="_blank">aquí</a> para crear una.</td>
+  </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">&nbsp;</td>
+    <td colspan="2" class="text_name">&nbsp;</td>
+    </tr>
+  <tr>
+    <td width="20" class="text_name">&nbsp;</td>
+    <td width="149" class="text_name">Nombre</td>
+    <td width="154"><input value="<?php echo $nombre; ?>" type="text" name="nombre" class="input_transp" /></td>
+    <td width="465" class="descripcion">Por ejemplo: Pedro</td>
+    </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">Primer apellido</td>
+    <td><input value="<?php echo $ape1; ?>" type="text" name="ape1" class="input_transp" /></td>
+    <td class="descripcion">Por ejemplo: García</td>
+    </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">Segundo apellido</td>
+    <td><input value="<?php echo $ape2; ?>" type="text" name="ape2" class="input_transp" /></td>
+    <td class="descripcion">Por ejemplo: Sánchez</td>
+    </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class="descripcion">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">Fecha de nacimiento</td>
+    <td colspan="2" valign="middle"><span class="descripcion">
+      <input name="nac" type="text" class="input_fecha" value="<?php echo $nac; ?>" />
+      Por ejemplo: 26/03/1992</span></td>
+    </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">&nbsp;</td>
+    <td colspan="2"><span class="descripcion"> Formato: día/mes/año</span></td>
+  </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class="descripcion">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">Correo de Google Calendar</td>
+    <td><input value="<?php echo $email; ?>" type="text" name="email" class="input_transp" /></td>
+    <td class="descripcion">Si no dispones de una cuenta puedes crearla <a href="https://www.google.com/accounts/NewAccount?service=cl" target="_blank">aquí.</a></td>
+    </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class="descripcion">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">Contraseña de Google Calendar</td>
+    <td><input type="password" name="pass1" class="input_transp" /></td>
+    <td class="descripcion">Escribe la contraseña empleada para iniciar la sesión en Google Calendar.</td>
+  </tr>
+  <tr>
+    <td class="text_name">&nbsp;</td>
+    <td class="text_name">Repita la contraseña</td>
+    <td><input type="password" name="pass2" class="input_transp" /></td>
+    <td class="descripcion">Repite la contraseña para evitar errores de tecleo.</td>
+  </tr>
+  <tr>
+  <td height="33" colspan="4" align="center"><span class="DivError">
+  
+  
+  
+  </span></td>
+  
+  </tr>
+  <tr>
+    <td height="42" colspan="4" align="center" valign="top"><input name="Crear" value="Crear una cuenta" type="submit" class="boton_crear" /></td>
+  </tr>
+  </table>
+</form></body></html>
+<p>
+  
+  <br>
+</p>
+</body>
+</html>
